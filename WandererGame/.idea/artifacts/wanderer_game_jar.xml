@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="wanderer-game:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/wanderer_game_jar</output-path>
+    <root id="archive" name="wanderer-game.jar">
+      <element id="module-output" name="wanderer-game" />
+    </root>
+  </artifact>
+</component>
