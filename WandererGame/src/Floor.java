@@ -33,7 +33,7 @@ public class Floor {
     public static boolean[][] wallMatrix(int type) {
         boolean[][] wallMatrix = new boolean[Board.tiles][Board.tiles];
 
-        if (type == 1 || type == 5 || type == 9|| type > 12) {
+        if (type % 4 == 1) {
             wallMatrix[0][3] = true;
             wallMatrix[0][4] = true;
             wallMatrix[1][4] = true;
@@ -77,12 +77,16 @@ public class Floor {
 
         }
 
-        if (type == 2 || type == 6 || type == 10){
-            wallMatrix[0][2] = true;
+        if (type % 4 == 2) {
             wallMatrix[0][3] = true;
             wallMatrix[0][4] = true;
+            wallMatrix[0][5] = true;
             wallMatrix[1][4] = true;
+            wallMatrix[1][5] = true;
             wallMatrix[2][4] = true;
+            wallMatrix[1][6] = true;
+            wallMatrix[0][6] = true;
+            wallMatrix[0][7] = true;
             wallMatrix[2][5] = true;
             wallMatrix[2][6] = true;
 
@@ -105,11 +109,8 @@ public class Floor {
             wallMatrix[4][5] = true;
             wallMatrix[5][5] = true;
 
-            wallMatrix[2][0] = true;
-            wallMatrix[2][1] = true;
+            wallMatrix[3][0] = true;
 
-            wallMatrix[4][8] = true;
-            wallMatrix[4][9] = true;
             wallMatrix[5][8] = true;
             wallMatrix[5][9] = true;
 
@@ -118,7 +119,6 @@ public class Floor {
 
             wallMatrix[1][9] = true;
             wallMatrix[2][9] = true;
-            wallMatrix[2][8] = true;
 
             wallMatrix[8][1] = true;
             wallMatrix[8][2] = true;
@@ -126,7 +126,7 @@ public class Floor {
 
         }
 
-        if (type == 3 || type == 7 || type == 11) {
+        if (type % 4 == 3) {
             wallMatrix[1][0] = true;
             wallMatrix[2][1] = true;
             wallMatrix[3][2] = true;
@@ -183,11 +183,7 @@ public class Floor {
 
         }
 
-        if (type == 4 || type == 8 || type == 12){
-            wallMatrix[2][0] = true;
-            wallMatrix[3][0] = true;
-            wallMatrix[3][1] = true;
-
+        if (type % 4 == 0) {
             wallMatrix[0][2] = true;
             wallMatrix[0][3] = true;
             wallMatrix[1][3] = true;
